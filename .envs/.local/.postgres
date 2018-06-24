@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=agendizeit
+POSTGRES_USER=XzDwqSNNiHTBofZHolutVWIwMhITCzDn
+POSTGRES_PASSWORD=I5zMGb0ObSPDIuvRR3R8mjmLXwOFjg7LJw7OO3VN24pozrabEHJQi0DIhqcyAA9M
