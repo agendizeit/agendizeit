@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>hello world.</p>
+
+
+{% for item in items %}
+    <h1>{{ item.topic }}</h1>
+    
+    {{ item.text}}
+{% endfor %}
+
+
+{% endblock content %}
+
