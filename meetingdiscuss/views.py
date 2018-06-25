@@ -14,4 +14,5 @@ def sharing(request):
     context = {
         'sitems': sitems,
     }
+    print(context)
     return render(request, "sharing.html", context)
