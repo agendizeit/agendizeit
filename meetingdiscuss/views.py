@@ -4,19 +4,19 @@ from .models import SharingItem
 from .models import Discuss
 from django import forms
 #Do I need these?
-#from django.contrib.auth.models import User
-#from django.contrib import auth
+from django.contrib.auth.models import User
+from django.contrib import auth
 
-class NewUserForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ['username', 'first_name', 'position_title', 'start_date', 'password', 'email']
+#class NewUserForm(forms.ModelForm):
+#    class Meta:
+#        model = User
+#        fields = ['username', 'first_name', 'position_title', 'start_date', 'password', 'email']
 
 
-class EditUserForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ['username', 'first_name', 'position_title', 'start_date', 'password', 'email']
+#class EditUserForm(forms.ModelForm):
+#    class Meta:
+#        model = User
+#        fields = ['username', 'first_name', 'position_title', 'start_date', 'password', 'email']
 
 
 class DiscussForm(forms.ModelForm):
@@ -26,26 +26,11 @@ class DiscussForm(forms.ModelForm):
         
 class ShareForm(forms.ModelForm):
     class Meta:
-        model = Share
+        model = SharingItem
         fields = ['text', 'image'] 
         
 def homepage(request):
-    if request.method == 'POST':
-
-        form = NewUserForm(request.POST)
-
-        if form.is_valid():
-            user = form.save()
-            auth.login(request, user)
-            return redirect('/')
-
-    else:
-        form = NewUserForm()
-
-    context = {
-        'form': form,
-    }
-    return render(request, 'home.html', context)
+    return redirect('/accounts/login/')
                
 
 def discussion(request):

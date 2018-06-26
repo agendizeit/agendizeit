@@ -15,3 +15,12 @@ class User(AbstractUser):
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
+
+    def get_gravatar(self):
+        email = self.email
+        encoded = hashlib.md5(email.encode('utf8')).hexdigest()
+        gravatar_url = "http://www.gravatar.com/avatar/%s?d=identicon" % encoded
+        return gravatar_url
+
+        def __str__(self):
+            return self.username + ' said ' + self.text

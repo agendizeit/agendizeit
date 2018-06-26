@@ -14,20 +14,10 @@ class Discuss (models.Model):
     text = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)  
-    
-image = models.FileField(upload_to='discuss_images/', null=True, blank=True) 
+    image = models.FileField(upload_to='discuss_images/', null=True, blank=True) 
 
 class SharingItem(models.Model):
     topic = models.CharField(max_length=150)
-    text = models.TextField()
-    
-image = models.FileField(upload_to='share_images/', null=True, blank=True)    
-    
-def get_gravatar(self):
-    email = self.username
-    encoded = hashlib.md5(email.encode('utf8')).hexdigest()
-    gravatar_url = "http://www.gravatar.com/avatar/%s?d=identicon" % encoded
-    return gravatar_url
+    text = models.TextField()    
+    image = models.FileField(upload_to='share_images/', null=True, blank=True)    
 
-    def __str__(self):
-        return self.username + ' said ' + self.text
