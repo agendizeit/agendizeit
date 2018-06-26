@@ -2,11 +2,13 @@
 
 {% block content %}
 <p>Personal Sharing</p>
+<p>Total item(s): {{ sitems|length }}</p>
 
-{% for item in items %}
-    <h1>{{ item.topic }}</h1>
+{% for sitem in sitems %}
+    <h1>{{ sitem.topic }}</h1>
+   
     
-    {{ item.text}}
+    <p>{{ sitem.text}}</p>
 {% endfor %}
 
 {% endblock content %}

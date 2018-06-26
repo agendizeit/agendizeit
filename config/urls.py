@@ -10,11 +10,12 @@ from meetingdiscuss import views
 urlpatterns = [
     path("", views.homepage),
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path(
-        "sharing/",
-        TemplateView.as_view(template_name="pages/sharing.html"),
-        name="sharing",
-    ),
+    path("sharing/", views.sharing),
+    #    path(
+    #        "sharing/",
+    #        TemplateView.as_view(template_name="pages/sharing.html"),
+    #        name="sharing",
+    #    ),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
