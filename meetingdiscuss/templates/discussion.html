@@ -1,21 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Bi-Monthly Meeting Agenda</p>
+<p> <h1 align="center">Bi-Monthly Meeting Agenda </h1></p>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
   {% for item in items %}
+  
    
-     <div class="col-4"> <h1>{{ item.topic }}</h1>
+     <div class="col-4"> <h3>{{ item.topic }}</h3>
+     
+    <p>{{ item.text}}</p> 
     
-    <p>{{ item.text}}</p> </div>
+     <p> <a href="comment-thread" class="btn btn-primary">View Comment Thread</a> </p>
+     
+    </div>
+    
     {% endfor %}  
     
     </div>
 </div>
     
-
+<style>
+		.container {
+			width: 100%;
+			margin-right: auto;
+			margin-left: auto;
+			padding-right: 15px;
+			padding-left: 15px;
+			width: 100%;
+			max-width: inherit;
+		}
+	</style>
 
 {% endblock content %}
-
+	

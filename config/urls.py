@@ -9,7 +9,7 @@ from meetingdiscuss import views
 
 urlpatterns = [
     path("", views.homepage),
-    path("", TemplateView.as_view(template_name="home/"), name="home"),
+    path("home/", views.homepage, name="home"),
     path("discussion/", views.discussion),
     path("sharing/", views.sharing),
   
