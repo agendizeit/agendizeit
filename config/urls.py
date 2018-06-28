@@ -12,6 +12,7 @@ urlpatterns = [
     path("home/", views.homepage, name="home"),
     path("discussion/", views.discussion),
     path("sharing/", views.sharing),
+    path("thread/<given_id>/", views.thread),
   
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
