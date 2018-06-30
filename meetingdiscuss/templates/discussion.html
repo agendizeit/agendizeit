@@ -15,12 +15,17 @@
      <p> <a class="btn btn-primary" href="/thread/">View Comment Thread</a> </p>
      
      <div class="form-group">
-      <label for="exampleTextarea">Example textarea</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        <form action="" form method="post">
+       {% csrf_token %}
+       {{ form.as_p }}
+        <label for="exampleTextarea">Example Text Area</label>
+        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+       
     </div>
+    <input type="submit" value="Submit">
+    </form>
     <div class="form-group">
-      
-      
+    
     </div>
      
     </div>

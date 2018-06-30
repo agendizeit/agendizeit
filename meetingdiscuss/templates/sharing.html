@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Personal Sharing</p>
+<h1>Personal Sharing</h1>
 <p>Total item(s): {{ sitems|length }}</p>
-
+<div class="container-fluid" border-color: red;>
 {% for sitem in sitems %}
-    <h1>{{ sitem.topic }}</h1>
+    <h2>{{ sitem.topic }}</h2>
    
     
     <p>{{ sitem.text}}</p>
 {% endfor %}
-
+</div>
 {% endblock content %}
