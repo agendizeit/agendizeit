@@ -5,10 +5,12 @@
 
 This is the Discussion Thread Page
 
+{% for discuss_item in discuss_items %}
+
+<p> {{discuss_item.text}}
 
 
-
-
+{% endfor %}
 
 
 {% endblock content %}
