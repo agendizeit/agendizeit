@@ -52,10 +52,10 @@ def thread(request):
     discuss_items = Discuss.objects.all()
     # Uncomment this when you add an agenda_item foreign key
     #discuss_items = discuss_items.filter(agenda_item_id=given_id)
-    print(list(discuss_items))
-    context = {
+    #print(list(discuss_items))
+    context = {'discuss_items': discuss_items,
     }
-    
+    print(context)
     
     return render(request, "thread.html", context)
     
