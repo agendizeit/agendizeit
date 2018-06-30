@@ -9,9 +9,9 @@ class AgendaItem(models.Model):
     text = models.TextField() #This text should either go away or it should be for the admin to provide background information on the agenda item.
 
 #Then I want a separate text box for different users to comments on the same agenda topic without adding another topic heading.
-class Discuss (models.Model):
+class Discuss(models.Model):
     # Uncomment this to make Discuss relate to AgendaItem
-    # agenda_item = models.ForeignKey(AgendaItem)
+    #agenda_item = models.ForeignKey(AgendaItem)
     username = models.CharField(max_length=30)
     text = models.TextField()
     created = models.DateTimeField(auto_now_add=True)

@@ -48,10 +48,10 @@ def sharing(request):
     print(context)
     return render(request, "sharing.html", context)
     
-def thread(request, given_id):
+def thread(request):
     discuss_items = Discuss.objects.all()
     # Uncomment this when you add an agenda_item foreign key
-    # discuss_items = discuss_items.filter(agenda_item_id=given_id)
+    #discuss_items = discuss_items.filter(agenda_item_id=given_id)
     print(list(discuss_items))
     context = {
     }
